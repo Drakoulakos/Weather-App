@@ -10,7 +10,7 @@ export default function Home() {
 
   const apiKey = "b7187ca773f5115ef5aa0102ddb861a9";
 
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.trim()}&appid=${apiKey}&units=metric`;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -20,7 +20,7 @@ export default function Home() {
     }
     setLoading(true);
     try {
-      const response = await axios.get(apiUrl);
+      const response = await axios.get(apiUrl.trim());
       setWeatherData(response.data);
       setError(null);
     } catch (error) {
