@@ -26,10 +26,7 @@ export default function Home() {
     } catch (error) {
       if (error.response && error.response.status === 404) {
         setError("Please enter a valid city");
-      } else {
-        setError(error.message);
       }
-      setWeatherData(null);
     }
     setLoading(false);
   };
@@ -79,6 +76,9 @@ export default function Home() {
             </div>
           )}
         </div>
+        <footer className="footer">
+          <p>Created by Michalis Drakoulakos</p>
+        </footer>
       </main>
     </>
   );
