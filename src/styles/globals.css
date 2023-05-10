@@ -8,15 +8,15 @@ body {
   min-height: 100vh;
   margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -44,10 +44,10 @@ input {
   align-items: center;
   margin-top: 2rem;
   background-color: none;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 5px;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   z-index: 1;
 }
 
@@ -60,10 +60,11 @@ input {
 }
 
 .footer {
-  left: 0;
+  position: fixed;
   bottom: 0;
   width: 100%;
   color: #ffffff;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,5 +93,7 @@ input {
     color: #ffffff;
     padding: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
