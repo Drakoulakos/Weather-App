@@ -7,8 +7,10 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   margin: 0;
-  padding: 2rem;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -16,6 +18,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+  text-align: center;
 }
 
 label {
@@ -64,6 +67,9 @@ input {
   color: #ffffff;
   padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -83,24 +89,14 @@ input {
   }
 
   .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     color: #ffffff;
     padding: 20px;
     text-align: center;
-  }
-  .weather {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    background-color: none;
-    padding: 2rem;
-    border-radius: 5px;
-    color: white;
-    font-size: 1rem;
-    z-index: 1;
   }
 }
