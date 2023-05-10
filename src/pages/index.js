@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import axios from "axios";
 
@@ -9,8 +9,33 @@ export default function Home() {
   const [error, setError] = useState(null);
 
   const apiKey = "b7187ca773f5115ef5aa0102ddb861a9";
+  const defaultCity = "Areopoli";
 
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.trim()}&appid=${apiKey}&units=metric`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${
+    city || defaultCity
+  }&appid=${apiKey}&units=metric`;
+  const currentLocationApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid=${apiKey}&units=metric`;
+
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(async (position) => {
+        const { latitude, longitude } = position.coords;
+        try {
+          const response = await axios.get(
+            currentLocationApiUrl
+              .replace("{latitude}", latitude)
+              .replace("{longitude}", longitude)
+          );
+          setWeatherData(response.data);
+          setError(null);
+        } catch (error) {
+          setError("Unable to get your location weather");
+        }
+      });
+    } else {
+      setError("Geolocation is not supported in your browser");
+    }
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -76,10 +101,10 @@ export default function Home() {
             </div>
           )}
         </div>
-        <footer className="footer">
-          <p>Created by Michalis Drakoulakos</p>
-        </footer>
       </main>
+      <footer className="footer">
+        <p>Created by Michalis Drakoulakos</p>
+      </footer>
     </>
   );
 }

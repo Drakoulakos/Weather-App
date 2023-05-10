@@ -5,6 +5,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 95vh;
+  margin: 0;
+  text-align: center;
 }
 
 .container {
@@ -32,11 +34,6 @@ input {
   transition: width 1s, padding 1s;
 }
 
-input:hover {
-  width: 80%;
-  padding: 12px;
-}
-
 .weather {
   display: flex;
   flex-direction: column;
@@ -55,6 +52,14 @@ input:hover {
 
 .error {
   color: red;
+}
+
+.footer {
+  color: #ffffff;
+  text-align: center;
+  left: 0;
+  width: 100%;
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -85,11 +90,6 @@ input:hover {
 }
 
 .footer {
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  color: #eaf6f6;
+  padding: 20px 0;
 }
