@@ -4,8 +4,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   min-height: 95vh;
   margin: 0;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .container {
@@ -21,6 +24,7 @@ label {
 }
 
 input {
+  width: 70%;
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -52,6 +56,17 @@ input {
   color: red;
 }
 
+.footer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 80%;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
 @media only screen and (max-width: 600px) {
   .container {
     max-width: 100%;
@@ -68,25 +83,14 @@ input {
     margin: 0.5rem;
   }
 
-  button {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.7rem;
+  .footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80%;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
   }
-
-  .weather {
-    font-size: 18px;
-    margin-top: 1rem;
-  }
-}
-
-.footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #333333;
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  position: absolute;
-  background: none;
 }
