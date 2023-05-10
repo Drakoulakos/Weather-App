@@ -5,7 +5,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  min-height: 95vh;
+  min-height: 100vh;
   margin: 0;
   padding: 2rem;
   box-sizing: border-box;
@@ -40,12 +40,13 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
   background-color: none;
   padding: 2rem;
   border-radius: 5px;
   color: white;
   font-size: 1.2rem;
-  z-index: 2;
+  z-index: 1;
 }
 
 .temperature {
@@ -57,11 +58,9 @@ input {
 }
 
 .footer {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   bottom: 0;
-  width: 80%;
+  width: 100%;
   color: #ffffff;
   padding: 20px;
   text-align: center;
@@ -84,11 +83,9 @@ input {
   }
 
   .footer {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     bottom: 0;
-    width: 80%;
+    width: 100%;
     color: #ffffff;
     padding: 20px;
     text-align: center;
