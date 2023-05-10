@@ -40,13 +40,12 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
   background-color: none;
   padding: 2rem;
   border-radius: 5px;
   color: white;
   font-size: 1.2rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .temperature {
@@ -93,17 +92,5 @@ input {
     color: #ffffff;
     padding: 20px;
     text-align: center;
-  }
-  .weather {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-    background-color: none;
-    padding: 2rem;
-    border-radius: 5px;
-    color: white;
-    font-size: 1rem;
-    z-index: 1;
   }
 }
