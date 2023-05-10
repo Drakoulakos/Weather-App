@@ -88,16 +88,6 @@ export default function Home() {
               <p>{weatherData.weather[0].description}</p>
               <p>Feels like: {Math.round(weatherData.main.feels_like)}°C</p>
               <p>Humidity: {weatherData.main.humidity}%</p>
-              <p>
-                <p>
-                  {new Date(weatherData.dt * 1000).toLocaleDateString("en-US", {
-                    weekday: "long",
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </p>
-              </p>
             </div>
           )}
         </div>
