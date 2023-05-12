@@ -1,3 +1,3 @@
 # Weather-App
 
-<a href="https://drakoulakos.github.io/Weather-App/">View Live</a>
+<a href="https://weather-app-kappa-khaki.vercel.app">View Live</a>
