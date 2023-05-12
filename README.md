@@ -1,3 +1,3 @@
 # Weather-App
 
-<a href="https://github.com/Drakoulakos/Weather-App.git">View Live</a>
+<a href="https://drakoulakos.github.io/Weather-App/">View Live</a>
