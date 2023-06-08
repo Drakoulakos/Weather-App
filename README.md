@@ -1,5 +1,5 @@
 # Weather-App
 
-Utilized with NextJS
+Utilized with React & NextJS
 
 <a href="https://weather-app-kappa-khaki.vercel.app">View Live</a>
